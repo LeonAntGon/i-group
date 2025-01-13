@@ -30,7 +30,7 @@ export default function Home() {
           <LocationMap />
           <About />
         </div>
-        <WhatsappLive/>
+        <WhatsappLive encodedMessage="Hola! Vengo desde su sitio web, quisiera hacerles una consulta!"/>
         <Tasar />
         <Footer />
         
