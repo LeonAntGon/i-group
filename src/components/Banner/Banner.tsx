@@ -2,7 +2,6 @@
 import { Header } from '@/components/Header'
 import Card from "@/components/widgets/Card"
 import './arrow.css';
-import GradientText from '../widgets/GradientText';
 
 export function Banner() {
     return (
