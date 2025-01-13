@@ -1,0 +1,9 @@
+@keyframes slide-10 {
+    to {
+      transform: translateY(2px);
+    }
+  }
+  
+  .animated-path {
+    animation: slide-10 1s infinite alternate both cubic-bezier(1, -0.01, 0, 0.98);
+  }
