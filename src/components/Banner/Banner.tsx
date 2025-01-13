@@ -2,10 +2,8 @@
 import { Header } from '@/components/Header'
 import Card from "@/components/widgets/Card"
 import './arrow.css';
-
 export function Banner() {
     return (
-        
             <section className="w-full h-[120vh] md:h-[100vh] bg-banner bg-no-repeat bg-cover bg-center">
             <div className="relative md:pt-0">
                             
