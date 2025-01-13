@@ -4,7 +4,12 @@ import { NavbarProps } from "./Navbar.types"
 import Link from "next/link";
 import { motion } from 'framer-motion'
 
-export default function LinksNavBar( props: NavbarProps) {
+export interface LinksNavBarProps {
+    menuItems: { text: string; href: string }[]; // Define la estructura de los items del menú
+    onLinkClick: () => void; // Callback para manejar clics
+}
+
+export default function LinksNavBar: React.FC<LinksNavBarProps> = ({ menuItems, onLinkClick }) => {
     const { openMobileMenu } = props;
     const [isScrolling, setIsScrolling] = useState(false)
 

@@ -8,6 +8,8 @@ import LinksNavBar from "../Navbar/LinksNavBar"
 import Image from 'next/image';
 import Logo from "../../../public/assets/Logo.png"
 
+
+
 export function Header() {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
