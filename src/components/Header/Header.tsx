@@ -5,6 +5,7 @@ import Hamburguer from "../widgets/Hamburguer";
 import { useState, useEffect } from "react";
 import { Navbar } from "../Navbar/index";
 import  LinksNavBar  from "../Navbar/LinksNavBar";
+import { MenuItem } from "../Navbar/Navbar.types"; 
 import Image from 'next/image';
 import Logo from "../../../public/assets/Logo.png";
 
@@ -43,12 +44,7 @@ export function Header() {
                     <Hamburguer crossed={openMobileMenu} setCrossedState={setOpenMobileMenu} />
                 </div>
 
-                <nav className={`z-10 mt-[70px] w-full h-[100vh] items-center gap-5 ${openMobileMenu ? 'absolute top-0 left-0 right-0 bg-black bg-opacity-50 backdrop-blur-md transition-all duration-300 ease-in-out' : 'hidden'}`}>
-                    <LinksNavBar
-                        menuItems={dataHeader.map(({ name, link }) => ({ text: name, href: link }))}
-                        onLinkClick={() => setOpenMobileMenu(false)}
-                    />
-                </nav>
+                
             </div>
         </header>
     );
