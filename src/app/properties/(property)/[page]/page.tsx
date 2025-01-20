@@ -2,6 +2,7 @@
 import { Error404 } from "@/components/Error404";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { DarkHeader } from "@/components/Header/darkHeader";
 import { dataProperties } from "@/components/Properties/Properties.data";
 import { Property } from "@/components/Property";
 import { TransitionPage } from "@/components/TransitionPage";
@@ -16,7 +17,7 @@ export default function Page() {
     return (
         <>
         <TransitionPage/>
-        <Header/>
+        <DarkHeader/>
             {filteredPage ? (
                 <Property house={filteredPage}/>
             ): (

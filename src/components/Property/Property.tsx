@@ -21,10 +21,7 @@ export function Property(props: PropertyProps) {
                             <TfiLocationPin/>
                             {house.location}
                         </h2>
-                        <div className="flex items-center px-2 py-1 rounded-lg bg-secondary top-2 right-2 text-white">
-                        <LiaStarSolid/>
-                        <span className="ml-1 font-semibold">{house.star}</span>
-                    </div>
+                        
                     </div>
 
                     <Image src={`/assets/properties/${house.image}`}

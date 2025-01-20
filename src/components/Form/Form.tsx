@@ -50,7 +50,7 @@ export function Form() {
                         </div>
 
                         <div className="flex justify-between gap-5 my-4">
-                            <button className="bg-secondary px-4 py-2 text-white rounded-lg text-sm">Enviar mensaje</button>
+                            <button className="bg-[#01a8b1] px-4 py-2 text-white rounded-lg text-sm">Enviar mensaje</button>
                             <button className="border-[1px] border-secondary text-secondary px-2 rounded-lg text-sm">Llamar</button>
                         </div>
                     </div>           

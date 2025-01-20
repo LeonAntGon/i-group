@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { dataHeader } from "../Header/Header.data";
 import { NavbarProps } from "./Navbar.types";
 import Link from "next/link";
 import { motion } from 'framer-motion';
 
-const LinksNavBar: React.FC<NavbarProps> = (props) => {
-    const { openMobileMenu } = props;
+const LinksNavBar: React.FC<NavbarProps> = ({ menuItems, onLinkClick }) => {
     const [isScrolling, setIsScrolling] = useState<boolean>(false);
 
     const handleScroll = () => {
@@ -35,18 +33,28 @@ const LinksNavBar: React.FC<NavbarProps> = (props) => {
                     className="pl-auto mx-auto md:fixed z-[9999] right-0 left-0 px-6 py-4 text-white font-semibold bg-gray-400/40 top-10 rounded-3xl backdrop-blur-md w-fit"
                 >
                     <nav className="items-center gap-5 sm:flex">
-                        {dataHeader.map(({ id, name, link }) => (
-                            <Link key={id} href={link} className="hover:text-[#05a2a9] hover:border-b-[1px] hover:border-[#05a2a9] transition duration-300">
-                                {name}
+                        {menuItems.map(({ text, href }, index) => (
+                            <Link 
+                                key={index} 
+                                href={href} 
+                                onClick={onLinkClick}
+                                className="hover:text-[#05a2a9] hover:border-b-[1px] hover:border-[#05a2a9] transition duration-300"
+                            >
+                                {text}
                             </Link>
                         ))}
                     </nav>
                 </motion.nav>
             ) : (
-                <div className={`${openMobileMenu ? 'absolute z-[1] left-0 top-20 bg-black r-0 w-full px-4 py-4' : 'hidden'} gap-5 sm:flex`}>
-                    {dataHeader.map(({ id, name, link }) => (
-                        <Link key={id} href={link} className="font-bold text-white hover:text-black block hover:border-b-[1px] hover:border-black transition duration-300">
-                            {name}
+                <div className="gap-5 sm:flex">
+                    {menuItems.map(({ text, href }, index) => (
+                        <Link 
+                            key={index} 
+                            href={href}
+                            onClick={onLinkClick} 
+                            className="font-bold text-white hover:text-black block hover:border-b-[1px] hover:border-black transition duration-300"
+                        >
+                            {text}
                         </Link>
                     ))}
                 </div>
