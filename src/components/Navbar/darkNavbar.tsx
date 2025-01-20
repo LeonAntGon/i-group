@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { dataHeader } from "../Header/Header.data"
-import { NavbarProps } from "./Navbar.types"
 import Link from "next/link";
 import { motion } from 'framer-motion'
 
