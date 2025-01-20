@@ -5,26 +5,22 @@ import { motion } from "framer-motion";
 import { fadeIn } from "./TransitionFramer";
 
 export function Transition(props: TransitionProps) {
-    const { children, className } = props
-    const ref = useRef(null)
-
-    const isInView = useInView(ref, {once: false})
-    const mainControls = useAnimation()
-    const slideControls = useAnimation()
-
-    const sequence = async () => {
-        if(isInView){
-            mainControls.start("visible")
-            slideControls.start("visible")
-        }
-    }
+  const { children, className } = props;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
 
     useEffect(() => {
-        sequence();
-    }, [mainControls, slideControls]); // Added dependencies here
+    if (isInView) {
+      mainControls.start("visible");
+      slideControls.start("visible");
+    }
+  }, [isInView, mainControls, slideControls]);
     return (
         <div ref={ref}>
-            <motion.div variants={fadeIn()}
+      <motion.div
+        variants={fadeIn()}
             initial="hidden"
             animate={mainControls}
             exit="hidden"
@@ -33,5 +29,5 @@ export function Transition(props: TransitionProps) {
                 {children}
             </motion.div>
         </div>
-    )
+  );
 }
