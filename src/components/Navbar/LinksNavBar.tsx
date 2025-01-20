@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { NavbarProps } from './Navbar.types';
+import { LinksNavBarProps } from './Navbar.types';
 import Link from "next/link";
 import { motion } from 'framer-motion';
 
-const LinksNavBar: React.FC<NavbarProps> = ({ menuItems, onLinkClick }) => {
+const LinksNavBar: React.FC<LinksNavBarProps> = ({ menuItems, onLinkClick }) => {
     const [isScrolling, setIsScrolling] = useState<boolean>(false);
 
     const handleScroll = () => {
@@ -84,3 +84,4 @@ const animationNavBar = {
 };
 
 export default LinksNavBar;
+

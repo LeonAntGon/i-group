@@ -4,8 +4,7 @@ export interface MenuItem {
     href: string;
 }
 
-export interface NavbarProps {
+export interface LinksNavBarProps {
   menuItems: MenuItem[];
   onLinkClick: () => void;
-  // otras propiedades si las hay
 }
