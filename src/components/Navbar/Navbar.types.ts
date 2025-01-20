@@ -1,3 +1,7 @@
-export type NavbarProps = {
-  openMobileMenu: boolean;
-};
+export interface NavbarProps {
+  menuItems: {
+    text: string;
+    href: string;
+  }[];
+  onLinkClick: () => void;
+}

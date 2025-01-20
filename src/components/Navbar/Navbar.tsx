@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react"
 import { dataHeader } from "../Header/Header.data"
-import { NavbarProps } from "./Navbar.types"
-import Link from "next/link";
+import Link from "next/link"
 import { motion } from 'framer-motion'
 
-export function Navbar( props: NavbarProps) {
-    const { openMobileMenu } = props;
+interface NavbarProps {
+  openMobileMenu: boolean;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ openMobileMenu }) => {
     const [isScrolling, setIsScrolling] = useState(false)
 
     const handleScroll = () => {
         if (window.scrollY > window.innerHeight - 600) {
             setIsScrolling(true)
-            
         } else {
             setIsScrolling(false)
         }
@@ -34,7 +35,7 @@ export function Navbar( props: NavbarProps) {
                 exit="exit"
                 className="pl-auto mx-auto md:fixed z-[9999] right-0 left-0 px-6 py-4 text-white font-semibold bg-gray-400/40 top-10 rounded-3xl backdrop-blur-md w-fit"
                 >
-                    <nav className="items-center  gap-5 sm:flex">
+                    <nav className="items-center gap-5 sm:flex">
                         {dataHeader.map(({ id, name, link}) =>(
                             <Link key={id} href={link} className="hover:text-[#05a2a9] hover:border-b-[1px] hover:border-[#05a2a9] transition duration-300">{name}</Link>
                         ))}
@@ -51,7 +52,6 @@ export function Navbar( props: NavbarProps) {
             </div>
     )
 }
-
 const animationNavBar = {
     initial: {
         y: -20,

@@ -4,6 +4,10 @@ import { NavbarProps } from "./Navbar.types"
 import Link from "next/link";
 import { motion } from 'framer-motion'
 
+interface NavbarProps {
+  openMobileMenu: boolean;
+}
+
 export default function DarkNavbar(props: NavbarProps) {
   const { openMobileMenu } = props;
   const [isScrolling, setIsScrolling] = useState(false)
