@@ -4,7 +4,7 @@ import { dataHeader } from "./Header.data";
 import Hamburguer from "../widgets/Hamburguer";
 import { useState, useEffect } from "react";
 import { Navbar } from "../Navbar/index";
-import LinksNavBar from "../Navbar/LinksNavBar";
+import  LinksNavBar  from "../Navbar/LinksNavBar";
 import Image from 'next/image';
 import Logo from "../../../public/assets/Logo.png";
 

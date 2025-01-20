@@ -12,13 +12,16 @@ export function Transition(props: TransitionProps) {
     const mainControls = useAnimation()
     const slideControls = useAnimation()
 
-    useEffect(() => {
+    const sequence = async () => {
         if(isInView){
             mainControls.start("visible")
             slideControls.start("visible")
         }
-    },[isInView])
+    }
 
+    useEffect(() => {
+        sequence();
+    }, [mainControls, slideControls]); // Added dependencies here
     return (
         <div ref={ref}>
             <motion.div variants={fadeIn()}
