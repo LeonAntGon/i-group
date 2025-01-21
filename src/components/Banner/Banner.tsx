@@ -9,17 +9,17 @@ export function Banner() {
                             
             <Header />
             
-            <div className=" h-[80vh] md:h-[90vh] md:h-[70vh] flex flex-col items-center md:justify-center flex-wrap">
+            <div className="h-[80vh] md:h-[90vh] flex flex-col items-center md:justify-center flex-wrap">
                 <div className="max-w-3xl text-center text-white overflow-hidden">
-                    <h1 className="pt-4 text-2xl md:text-5xl font-semibold">CONECTÁ CON LA PATAGONIA</h1>
+                    <h1 className="pt-2 md:p-0 text-2xl md:text-5xl font-semibold">CONECTÁ CON LA PATAGONIA</h1>
                     
                     
                     
-                    <h2 className="mt-2 text-xl md:my-6 font-bold text-[#91d9eb] mb-[50px] md:mb-[80px]">Desarrollos inmobiliarios</h2>
+                    <h2 className="mt-2 text-xl md:my-6 font-bold text-[#91d9eb] mb-[2vh] md:mb-[4vh]">Desarrollos inmobiliarios</h2>
                     <Card/>
                 </div>
             </div>
-            <div className="flex justify-center pb-6">
+            <div className="flex justify-center mt-[-10vh] md:mt-[-20vh]">
                 <svg
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"

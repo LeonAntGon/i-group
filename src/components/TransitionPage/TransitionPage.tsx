@@ -6,7 +6,7 @@ export function TransitionPage() {
         <AnimatePresence mode="wait">
             <div>
                 <motion.div
-                className="fixed top-0 bottom-0 right-full w-screen h-screen z-40 bg-[#2563EB]"
+                className="fixed top-0 bottom-0 right-full w-screen h-screen z-50 bg-[#2563EB]"
                 variants={transitionVariants}
                 initial="initial"
                 animate="animate"
@@ -15,7 +15,7 @@ export function TransitionPage() {
                 >
                 </motion.div>
                 <motion.div
-                className="fixed top-0 bottom-0 right-full w-screen h-screen z-50 bg-[#91d9eb]/70 opacity-50"
+                className="fixed top-0 bottom-0 right-full w-screen h-screen z-60 bg-[#91d9eb]/70 opacity-50"
                 variants={transitionVariants}
                 initial="initial"
                 animate="animate"
