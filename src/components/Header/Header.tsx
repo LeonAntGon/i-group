@@ -55,7 +55,7 @@ export function Header() {
           <ul className="flex flex-col items-center py-4 mt-20">
             <li className="w-full">
               <Link 
-                href="#about" 
+                href="/" 
                 onClick={() => setOpenMobileMenu(false)}
                 className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
@@ -64,7 +64,7 @@ export function Header() {
             </li>
             <li className="w-full">
               <Link 
-                href="#blog" 
+                href="/nosotros" 
                 onClick={() => setOpenMobileMenu(false)}
                 className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
@@ -73,7 +73,7 @@ export function Header() {
             </li>
             <li className="w-full">
               <Link 
-                href="#contact" 
+                href="/propiedades" 
                 onClick={() => setOpenMobileMenu(false)}
                 className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
@@ -82,7 +82,7 @@ export function Header() {
             </li>
             <li className="w-full">
               <Link 
-                href="#contact" 
+                href="/proyectos" 
                 onClick={() => setOpenMobileMenu(false)}
                 className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
@@ -91,7 +91,7 @@ export function Header() {
             </li>
             <li className="w-full">
               <Link 
-                href="#projects" 
+                href="/contacto" 
                 onClick={() => setOpenMobileMenu(false)}
                 className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >

@@ -13,8 +13,8 @@ export const dataHeader: HeaderData[] = [
   },
   {
     id: 3,
-    name: "Quienes Somos",
-    link: "/quienes-somos",
+    name: "Sobre nosotros",
+    link: "/nosotros",
   },
   {
     id: 4,
