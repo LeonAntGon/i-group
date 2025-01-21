@@ -10,7 +10,7 @@ export const dataFooter = [
       {
         id: 2,
         name: "Propiedades",
-        link: "#propiedades",
+        link: "/propiedades",
       },
       {
         id: 3,
@@ -25,17 +25,17 @@ export const dataFooter = [
       {
         id: 1,
         name: "Sobre nosotros",
-        link: "#about-us",
+        link: "/sobre-nosotros",
       },
       {
         id: 2,
-        name: "Servicios",
-        link: "#services",
+        name: "Proyectos Inmobiliarios",
+        link: "/proyectos",
       },
       {
         id: 3,
         name: "Contactar",
-        link: "#location",
+        link: "/contacto",
       },
     ],
   },

@@ -4,12 +4,12 @@ import Card from "@/components/widgets/Card"
 import './arrow.css';
 export function Banner() {
     return (
-            <section className="w-full h-[120vh] md:h-[100vh] bg-banner bg-no-repeat bg-cover bg-center">
+            <section className="w-full h-[110vh] md:h-[100vh] bg-banner bg-no-repeat bg-cover bg-center">
             <div className="relative md:pt-0">
                             
             <Header />
             
-            <div className=" h-[90vh] md:h-[70vh] flex flex-col items-center md:justify-center flex-wrap">
+            <div className=" h-[80vh] md:h-[90vh] md:h-[70vh] flex flex-col items-center md:justify-center flex-wrap">
                 <div className="max-w-3xl text-center text-white overflow-hidden">
                     <h1 className="pt-4 text-2xl md:text-5xl font-semibold">CONECTÁ CON LA PATAGONIA</h1>
                     

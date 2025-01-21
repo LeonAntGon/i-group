@@ -26,8 +26,10 @@ export function Footer() {
                     <h4 className='mb-6 text-xl font-semibold'>Redes sociales</h4>
                     
                     <div className='flex gap-4 mt-5 md:justify-end'>
-                        <LiaInstagram className='text-3xl cursor-pointer' href='#!'/>
-                        <a href="">
+                        <a href='https://www.instagram.com/igroup_patagonia/'>
+                            <LiaInstagram className='text-3xl cursor-pointer'/>
+                        </a>
+                        <a href="https://www.facebook.com/search/top?q=igroup%20patagonia">
                             <svg width="28px" height="28px" stroke-width="1.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#ffffff">
                                 <path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
