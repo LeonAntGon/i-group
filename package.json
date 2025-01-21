@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@vercel/analytics": "^1.4.1",
     "framer-motion": "^10.16.4",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.471.1",

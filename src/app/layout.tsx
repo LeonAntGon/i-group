@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter, Quicksand } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/react"
 import './globals.css'
 
 const quickSand = Quicksand({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Real State - TarreDev',
-  description: 'Aplicación creada del video de Youtube de TarreDev',
+  title: 'Igroup Patagonia',
+  description: '',
 }
 
 export default function RootLayout({
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={quickSand.className}>{children}</body>
+      <Analytics />
     </html>
   )
 }
