@@ -2,7 +2,7 @@ export const housesData = [
   {
     id: 1,
     name: "Valencia",
-    image: "house5.jpg",
+    image: "house5.png",
     position: {
       lat: 39.46975,
       lng: -0.37739,
@@ -11,7 +11,7 @@ export const housesData = [
   {
     id: 2,
     name: "Madrid",
-    image: "house2.jpg",
+    image: "house2.png",
     position: {
       lat: 40.4165,
       lng: -3.70256,
@@ -38,7 +38,7 @@ export const housesData = [
   {
     id: 5,
     name: "Barcelona",
-    image: "house1.jpg",
+    image: "house1.png",
     position: {
       lat: 41.41803,
       lng: 2.18596,
@@ -47,7 +47,7 @@ export const housesData = [
   {
     id: 6,
     name: "Pamplona",
-    image: "house7.jpg",
+    image: "house7.png",
     position: {
       lat: 42.81687,
       lng: -1.64323,
@@ -56,7 +56,7 @@ export const housesData = [
   {
     id: 7,
     name: "Cuenca",
-    image: "house6.jpg",
+    image: "house6.png",
     position: {
       lat: 40.06667,
       lng: -2.13333,
@@ -65,7 +65,7 @@ export const housesData = [
   {
     id: 8,
     name: "Ibiza",
-    image: "house9.jpg",
+    image: "house9.png",
     position: {
       lat: 38.90883,
       lng: 1.43296,
@@ -74,7 +74,7 @@ export const housesData = [
   {
     id: 9,
     name: "Salamanca",
-    image: "house8.jpg",
+    image: "house8.png",
     position: {
       lat: 42.60003,
       lng: -5.57032,
@@ -83,7 +83,7 @@ export const housesData = [
   {
     id: 10,
     name: "Cáceres",
-    image: "house8.jpg",
+    image: "house8.png",
     position: {
       lat: 39.47649,
       lng: -6.37224,
@@ -92,7 +92,7 @@ export const housesData = [
   {
     id: 11,
     name: "Moraleja",
-    image: "house4.jpg",
+    image: "house4.png",
     position: {
       lat: 40.06682,
       lng: -6.65983,
@@ -101,7 +101,7 @@ export const housesData = [
   {
     id: 12,
     name: "Benavente",
-    image: "house1.jpg",
+    image: "house1.png",
     position: {
       lat: 42.00249,
       lng: -5.67826,
@@ -110,7 +110,7 @@ export const housesData = [
   {
     id: 13,
     name: "Granada",
-    image: "house2.jpg",
+    image: "house2.png",
     position: {
       lat: 38.01328,
       lng: -3.3705,
