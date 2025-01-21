@@ -20,7 +20,7 @@ export const housesData = [
   {
     id: 3,
     name: "Salinas del Gualicho",
-    image: "../maps/rio.jpg",
+    image: "../maps/rio.png",
     position: {
       lat: -40.293024,
       lng: -65.111736,
@@ -29,7 +29,7 @@ export const housesData = [
   {
     id: 4,
     name: "San Antonio",
-    image: "../maps/tierra.jpg",
+    image: "../maps/tierra.png",
     position: {
       lat: -41.094418,
       lng: -71.794641,

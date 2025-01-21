@@ -28,7 +28,8 @@ export function MarkerHouse(props: MarkerHouseProps) {
                             </span>
                             <h5 className='text-md text-secondary'>{name}</h5>
                             </div>
-                            <Image src={`/assets/houses/${image}`} alt={name} width={100} height={100} className='w-full h-auto'/>
+                            
+                            <Image src={`/assets/maps/${image}`} alt={name} width={100} height={100} className='w-full h-auto'/>
                             <button className='px-3 py-2 mt-2 text-white rounded-lg bg-secondary'>Ver propiedad</button>
                         
                     </Popup>
