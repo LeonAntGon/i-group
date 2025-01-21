@@ -50,43 +50,52 @@ export function Header() {
         <div
           className={`${
             openMobileMenu ? 'block' : 'hidden'
-          } md:hidden absolute top-full left-0 w-full bg-black z-20 mt-[-78vh]`}
+          } md:hidden fixed top-0 left-0 w-full h-screen bg-black/90 z-20`}
         >
-          <ul className="flex flex-col items-center py-4">
+          <ul className="flex flex-col items-center py-4 mt-20">
             <li className="w-full">
               <Link 
                 href="#about" 
                 onClick={() => setOpenMobileMenu(false)}
-                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-900 border-b border-purple-900"
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
-                About
+                Inicio
               </Link>
             </li>
             <li className="w-full">
               <Link 
                 href="#blog" 
                 onClick={() => setOpenMobileMenu(false)}
-                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-600 border-b border-purple-900"
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
-                Blogs
+                Sobre nosotros
               </Link>
             </li>
             <li className="w-full">
               <Link 
                 href="#contact" 
                 onClick={() => setOpenMobileMenu(false)}
-                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-600 border-b border-purple-900"
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
-                Contact
+                Propiedades
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link 
+                href="#contact" 
+                onClick={() => setOpenMobileMenu(false)}
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
+              >
+                Proyectos inmobiliarios
               </Link>
             </li>
             <li className="w-full">
               <Link 
                 href="#projects" 
                 onClick={() => setOpenMobileMenu(false)}
-                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-600 border-b border-purple-900"
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-[#1cc3ec] border-b border-[#91d9eb]"
               >
-                Projects
+                Conctacto
               </Link>
             </li>
           </ul>
