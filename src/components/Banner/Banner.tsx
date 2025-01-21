@@ -4,7 +4,7 @@ import Card from "@/components/widgets/Card"
 import './arrow.css';
 export function Banner() {
     return (
-            <section className="w-full h-[110vh] md:h-[100vh] bg-banner bg-no-repeat bg-cover bg-center">
+            <section className="w-full h-[100vh] md:h-[100vh] bg-banner bg-no-repeat bg-cover bg-center">
             <div className="relative md:pt-0">
                             
             <Header />
@@ -19,7 +19,7 @@ export function Banner() {
                     <Card/>
                 </div>
             </div>
-            <div className="flex justify-center mt-[-10vh] md:mt-[-20vh]">
+            <div className="flex justify-center mt-[-15vh] md:mt-[-20vh]">
                 <svg
                     viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg"
