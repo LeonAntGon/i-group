@@ -4,47 +4,94 @@ import { dataHeader } from "./Header.data";
 import Hamburguer from "../widgets/Hamburguer";
 import { useState, useEffect } from "react";
 import { Navbar } from "../Navbar/index";
-import  LinksNavBar  from "../Navbar/LinksNavBar";
+import LinksNavBar from "../Navbar/LinksNavBar";
 import Image from 'next/image';
 import Logo from "../../../public/assets/Logo.png";
 
 export function Header() {
-    const [openMobileMenu, setOpenMobileMenu] = useState<boolean>(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState<boolean>(false);
 
-    useEffect(() => {
-        if (openMobileMenu) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-        return () => {
-            document.body.style.overflow = 'auto';
-        };
-    }, [openMobileMenu]);
+  useEffect(() => {
+    if (openMobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [openMobileMenu]);
 
-    return (
-        <header className="px-auto py-5 w-full z-10">
-            <div className="flex items-center justify-between px-5 sm:px-8 z-20">
-                <Link href={"/"}>
-                    <Image
-                        src={Logo}
-                        alt="Descripción de la imagen"
-                        width={600} // Ancho deseado
-                        height={400} // Alto deseado
-                        priority // Opcional: prioriza el precargado de la imagen
-                        className="w-[180px] h-[66px]"
-                    />
-                </Link>
+  return (
+    <header className="px-auto py-5 w-full z-10">
+      <nav className="flex items-center justify-between px-5 sm:px-8 z-20">
+        <Link href="/">
+          <Image
+            src={Logo}
+            alt="Descripción de la imagen"
+            width={600}
+            height={400}
+            priority
+            className="w-[180px] h-[66px]"
+          />
+        </Link>
 
-                <Navbar openMobileMenu={openMobileMenu} />
+        <Navbar openMobileMenu={openMobileMenu} />
 
-                {/* Responsive navbar */}
-                <div className="flex sm:hidden z-40 focus-within:" onClick={() => setOpenMobileMenu(!openMobileMenu)}>
-                    <Hamburguer crossed={openMobileMenu} setCrossedState={setOpenMobileMenu} />
-                </div>
+        {/* Hamburger Menu for Mobile */}
+        <div className="flex sm:hidden z-40">
+          <Hamburguer 
+            crossed={openMobileMenu} 
+            setCrossedState={setOpenMobileMenu} 
+          />
+        </div>
 
-                
-            </div>
-        </header>
-    );
+        {/* Mobile Menu */}
+        <div
+          className={`${
+            openMobileMenu ? 'block' : 'hidden'
+          } md:hidden absolute top-full left-0 w-full bg-black z-20 mt-[-78vh]`}
+        >
+          <ul className="flex flex-col items-center py-4">
+            <li className="w-full">
+              <Link 
+                href="#about" 
+                onClick={() => setOpenMobileMenu(false)}
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-900 border-b border-purple-900"
+              >
+                About
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link 
+                href="#blog" 
+                onClick={() => setOpenMobileMenu(false)}
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-600 border-b border-purple-900"
+              >
+                Blogs
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link 
+                href="#contact" 
+                onClick={() => setOpenMobileMenu(false)}
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-600 border-b border-purple-900"
+              >
+                Contact
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link 
+                href="#projects" 
+                onClick={() => setOpenMobileMenu(false)}
+                className="block py-2 px-6 text-xl text-white text-center hover:bg-purple-600 border-b border-purple-900"
+              >
+                Projects
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  );
 }
