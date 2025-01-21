@@ -12,7 +12,7 @@ export default function Hamburguer({ crossed, setCrossedState }: HamburguerProps
       aria-expanded={crossed}
       onClick={() => setCrossedState((e) => !e)}
       className={
-        'flex aspect-square h-fit select-none flex-col items-center justify-center rounded-full'
+        'flex aspect-square h-fit select-none flex-col items-center justify-center rounded-full z-20'
       }>
       <motion.div
         style={{

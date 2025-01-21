@@ -24,7 +24,7 @@ export function Header() {
 
     return (
         <header className="px-auto py-5 w-full z-10">
-            <div className="flex items-center justify-between px-5 sm:px-8 z-50">
+            <div className="flex items-center justify-between px-5 sm:px-8 z-20">
                 <Link href={"/"}>
                     <Image
                         src={Logo}
