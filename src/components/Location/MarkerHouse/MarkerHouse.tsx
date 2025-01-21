@@ -31,7 +31,6 @@ export function MarkerHouse(props: MarkerHouseProps) {
                             
                             <Image src={`/assets/houses/${image}`} alt={name} width={100} height={100} className='w-full h-auto'/>
                             <button className='px-3 py-2 mt-2 text-white rounded-lg bg-secondary'>Ver propiedad</button>
-                        
                     </Popup>
                 </Marker>
             )
