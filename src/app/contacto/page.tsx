@@ -208,15 +208,15 @@ function App() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 text-blue-600 mr-3" />
-                  <span>Av. San Martín 123, Bariloche, Río Negro</span>
+                  <span>Onelli 2747, R8430 El Bolsón, Río Negro</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 text-blue-600 mr-3" />
-                  <span>+54 294 444-5555</span>
+                  <span>+54 9 294 430-4851</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 text-blue-600 mr-3" />
-                  <span>contacto@patagoniareal.com</span>
+                  <span>igrouppatagonia@gmail.com</span>
                 </div>
               </div>
             </div>
