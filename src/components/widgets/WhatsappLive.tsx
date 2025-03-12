@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Image from 'next/image';
 import React from 'react';
 import WspLogo from '../../../public/assets/wsp.png';
@@ -14,72 +14,59 @@ const WhatsappLive: React.FC<WhatsappLiveProps> = ({ encodedMessage }) => {
   const baseUrl = "https://api.whatsapp.com/send";
   const whatsappLink = `${baseUrl}?phone=${whatsappNumber}&text=${encodedMessage}&type=phone_number&app_absent=0`;
 
-  const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 75) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+  useEffect(() =>{
+    const handleScroll = () =>{
+        const whatsappLinkElement = document.querySelector(".whatsapp-link");
+        if(window.scrollY > 75) {
+            whatsappLinkElement?.classList.add("visible");
+        } else {
+            whatsappLinkElement?.classList.remove("visible")
+        }
+    }; 
 
     const checkScrollVisibility = () => {
-      const scrollHeight = document.documentElement.scrollHeight;
-      const clientHeight = document.documentElement.clientHeight;
+        const whatsappLinkElement = document.querySelector(".whatsapp-link");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
 
-      if (scrollHeight > clientHeight) {
-        handleScroll();
-        window.addEventListener("scroll", handleScroll);
-      } else {
-        setIsVisible(true);
-      }
-    };
+        if(scrollHeight > clientHeight) {
+            handleScroll();
+            window.addEventListener("scroll", handleScroll);
+        } else {
+            whatsappLinkElement?.classList.add("visible");
+        }
+    }
 
     checkScrollVisibility();
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    window.addEventListener("scroll", handleScroll)
 
-  return (
-    <div>
-      <Link
-        href={whatsappLink}
-        target='_blank'
-        rel='noreferrer noopener'
-        style={{
-          position: 'fixed',
-          bottom: isVisible ? '20px' : '-80px',
-          right: '40px',
-          zIndex: 50,
-          transition: 'bottom 0.3s ease',
-        }}
-      >
-        <span
-          style={{
-            position: 'absolute',
-            left: '7px',
-            top: '8px',
-            zIndex: -50,
-          }}
-        >
-          <span className='flex size-full items-center justify-center animate-ping rounded-full bg-green-500 opacity-75'></span>
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    };
+},[])
+
+
+
+return <div>
+    <Link
+    className='whatsapp-link relative'
+    href={whatsappLink}
+    target='_blank'
+    rel='nonereferrer noopener'>
+        <span className='absolute left-[7px] top-[8px] -z-50 size-10 '>
+            <span className='flex size-full items-center justify-center animate-ping rounded-full bg-green-500 opacity-75'></span>
         </span>
-        <Image
-          src={WspLogo}
-          alt='whatsapp'
-          width={55}
-          height={55}
-          style={{
-            zIndex: 60,
-          }}
+        <Image 
+        src={WspLogo} 
+        alt='whatsapp' 
+        width={55} 
+        height={55}
+        className='z-60  hover:opacity-90 transition duration-300'
         />
-      </Link>
-    </div>
-  );
+    </Link>
+
+</div>;
 };
 
 export default WhatsappLive;
